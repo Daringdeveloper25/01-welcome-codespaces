@@ -102,7 +102,7 @@ body {
   background-color: #005582; /* Darker LinkedIn blue */
 }
 
-.bio-section, .roles-section, .projects-section {
+.bio-section, .roles-section, .projects-section, .skills-section {
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
@@ -111,17 +111,17 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.bio-section h2, .roles-section h2, .projects-section h2 {
+.bio-section h2, .roles-section h2, .projects-section h2, .skills-section h2 {
   color: #003366;
   text-align: center;
 }
 
-.bio-section p, .roles-section ul, .projects-section ul {
+.bio-section p, .roles-section ul, .projects-section ul, .skills-section ul {
   font-size: 16px;
   line-height: 1.6;
 }
 
-.roles-section ul, .projects-section ul {
+.roles-section ul, .projects-section ul, .skills-section ul {
   list-style-type: disc;
   padding-left: 20px;
 }
@@ -180,4 +180,12 @@ body {
   100% {
     transform: translateX(100%);
   }
+}
+
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 4px;
 }
