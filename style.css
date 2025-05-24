@@ -6,6 +6,16 @@ header {
   text-align: center;
 }
 
+header, .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content h1 {
+  text-align: center;
+}
+
 .navbar {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%; /* Ensure the navbar spans the full width */
@@ -65,10 +75,16 @@ body {
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.profile-pic:hover {
+  transform: scale(1.3);
 }
 
 .linkedin-button {
@@ -108,4 +124,60 @@ body {
 .roles-section ul, .projects-section ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.profile-pic-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.profile-pic-top:hover {
+  transform: scale(1.3);
+}
+
+.animated-roles-section {
+  margin: 40px 0 20px 0;
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.roles-marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.roles-marquee span {
+  display: inline-block;
+  padding-left: 0;
+  font-size: 1.2em;
+  /* Make the text wide enough for smooth looping */
+  min-width: 100%;
+  animation: slide-roles-right 30s linear infinite;
+}
+
+@keyframes slide-roles-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
